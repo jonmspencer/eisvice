@@ -13,3 +13,18 @@ if(!is_admin()) {
 require('inc/functions/standard.php');
 // Menus
 require('inc/functions/menus.php');
+// Custom Post Types
+require('inc/functions/custom_post_types.php');
+// Custom Taxonomies
+require('inc/functions/custom_taxonomies.php');
+
+// Metaboxes
+// CMB2 INIT
+if ( file_exists( dirname( __FILE__ ) . '/inc/vendor/cmb2/init.php' ) ) {
+  require_once dirname( __FILE__ ) . '/inc/vendor/cmb2/init.php';
+} elseif ( file_exists( dirname( __FILE__ ) . '/inc/vendor/CMB2/init.php' ) ) {
+  require_once dirname( __FILE__ ) . '/inc/vendor/CMB2/init.php';
+}
+
+// Music Meta
+require('inc/functions/metaboxes/music-meta.php');
